@@ -37,17 +37,37 @@ def get_version():
     else:
         if VERSION[3] != 'final':
             version = '%s %s %s' % (version, VERSION[3], VERSION[4])
-    svn_rev = get_svn_revision()
-    if svn_rev != u'SVN-unknown':
-        version = "%s %s" % (version, svn_rev)
+
+    # VCS revision, if we are in an devel environment
+    # updated to support Git too
+    vcs_ok, vcs_rev = get_vcs_revision()
+    if vcs_ok:
+        version = "%s %s" % (version, vcs_rev)
     return version
+
+###############################################################
+## for getting revision info from a VCS
+###############################################################
+
+VCS_HANDLERS = []
+
+def get_vcs_revision(path=None):
+    # try the handlers one by one, return the first successful
+    # match of VCS info
+    for handler in VCS_HANDLERS:
+        is_ok, result = handler(path)
+        if is_ok:
+            return (is_ok, result, )
+
+    # no info available, signal failure
+    return (False, None, )
 
 def get_svn_revision(path=None):
     """
     Returns the SVN revision in the form SVN-XXXX,
     where XXXX is the revision number.
 
-    Returns SVN-unknown if anything goes wrong, such as an unexpected
+    Returns (False, None) if anything goes wrong, such as an unexpected
     format of internal SVN files.
 
     If path is provided, it should be a directory whose SVN info you want to
@@ -78,10 +98,46 @@ def get_svn_revision(path=None):
             rev = dom.getElementsByTagName('entry')[0].getAttribute('revision')
 
     if rev:
-        return u'SVN-%s' % rev
-    return u'SVN-unknown'
+        return (True, u'SVN-%s' % rev, )
+    return (False, None, )
+
+VCS_HANDLERS.append(get_svn_revision)
 
 # TODO: add Git revision fetching support
+def get_git_commit(path=None):
+    """
+    Returns the Git commit id in the form Git-01234567,
+    where the commit id is truncated after the 8th hex digit.
+
+    Returns (False, None) if anything goes wrong, such as an unexpected
+    format of internal Git files.
+
+    If path is provided, it should be a directory whose Git info you want to
+    inspect. If it's not provided, this will use the root package
+    directory's parent dir.
+    """
+    commit_id = None
+    if path is None:
+        path = gingerprawn.__path__[0]
+        loghead_path = '%s/../.git/logs/HEAD' % path
+    else:
+        loghead_path = '%s/.git/logs/HEAD' % path
+    # normalize a little bit
+    loghead_path = os.path.normpath(loghead_path)
+
+    try:
+        loghead = open(loghead_path, 'rb').read()
+    except IOError:
+        pass
+    else:
+        parts = loghead.split(' ')
+        commit_id = parts[1][:8]
+
+    if commit_id:
+        return (True, u'Git-%s' % commit_id, )
+    return (False, None, )
+
+VCS_HANDLERS.append(get_git_commit)
 
 # init our version str... this is constant during one run
 VERSION_STR = get_version()
