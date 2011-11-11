@@ -138,7 +138,6 @@ def get_git_commit(path=None):
         ref_path_match = re.search(r'^ref: (.*)$', ref)
         if ref_path_match:
             ref_path = ref_path_match.groups()[0]
-            print ref_path
         else:
             # unrecognized HEAD format...
             return (False, None, )
@@ -153,7 +152,6 @@ def get_git_commit(path=None):
     else:
         # Truncate the commit id.
         commit_id = commit[:8]
-        print 'commit:', commit
 
     # if we arrive here, we're done and commit id is ready.
     return (True, u'Git-%s' % commit_id, )
