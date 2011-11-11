@@ -42,7 +42,8 @@ def get_version():
     # updated to support Git too
     vcs_ok, vcs_rev = get_vcs_revision()
     if vcs_ok:
-        version = "%s %s" % (version, vcs_rev)
+        # Update: when it's dev version, show no conventional version number
+        version = vcs_rev
     return version
 
 ###############################################################
@@ -141,5 +142,6 @@ VCS_HANDLERS.append(get_git_commit)
 
 # init our version str... this is constant during one run
 VERSION_STR = get_version()
+
 
 # vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
