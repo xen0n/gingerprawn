@@ -81,10 +81,10 @@ def get_svn_revision(path=None):
     entries_path = '%s/.svn/entries' % path
 
     try:
-        fp = open(entries_path, 'r')
-        entries = fp.read()
+        with open(entries_path, 'r') as fp:
+            entries = fp.read()
     except IOError:
-        pass
+        return (False, None, )
     else:
         # Versions >= 7 of the entries file are flat text.  The first line is
         # the version number. The next set of digits after 'dir' is the revision.
@@ -98,8 +98,6 @@ def get_svn_revision(path=None):
             from xml.dom import minidom
             dom = minidom.parse(entries_path)
             rev = dom.getElementsByTagName('entry')[0].getAttribute('revision')
-    finally:
-        fp.close()
 
     if rev:
         return (True, u'SVN-%s' % rev, )
@@ -132,8 +130,8 @@ def get_git_commit(path=None):
     # Phase 1, read the HEAD file to get the current head
     head_path = os.path.join(git_path, 'HEAD')
     try:
-        fp = open(head_path, 'rb')
-        ref = fp.read().strip()
+        with open(head_path, 'rb') as fp:
+            ref = fp.read().strip()
     except IOError:
         return (False, None, )
     else:
@@ -144,22 +142,18 @@ def get_git_commit(path=None):
         else:
             # unrecognized HEAD format...
             return (False, None, )
-    finally:
-        fp.close()
 
     # now ref_path is ready, move on to Phase 2, pull out the commit id
     commit_path = os.path.normpath(os.path.join(git_path, ref_path))
     try:
-        fp = open(commit_path, 'rb')
-        commit = fp.read().strip()
+        with open(commit_path, 'rb') as fp:
+            commit = fp.read().strip()
     except IOError:
         return (False, None, )
     else:
         # Truncate the commit id.
         commit_id = commit[:8]
         print 'commit:', commit
-    finally:
-        fp.close()
 
     # if we arrive here, we're done and commit id is ready.
     return (True, u'Git-%s' % commit_id, )
