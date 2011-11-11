@@ -76,4 +76,4 @@ def req_weather_with_finalize(tgt):
     tgt.add_task(auto.OP_CLOSE)
 
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8

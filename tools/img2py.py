@@ -11,7 +11,7 @@ from wx.lib.embeddedimage import PyEmbeddedImage
 
 FOOTER_FORMAT = '''\
 
-# vi:ai:et:ts=2 sw=2 sts=2 ff=unix fenc=utf-8
+# vi:ai:et:ts=2 sw=2 sts=2 fenc=utf-8
 '''
 
 IMAGE_ENTRY_FORMAT = '''\
@@ -74,4 +74,4 @@ if __name__ == '__main__':
     import sys
     main(sys.argv)
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8

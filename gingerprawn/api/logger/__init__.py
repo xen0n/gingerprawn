@@ -100,4 +100,4 @@ def install(modname=None, handlename='log'):
     tgt['logisdebug'] = methodize(is_debug, log)
 
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8

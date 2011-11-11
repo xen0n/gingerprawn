@@ -36,4 +36,4 @@ SHRIMP_ICON = PyEmbeddedImage(
 "W1hYeL11qSqAMeAHgIsXLyYPHTr0YzNKXo6rqhxrlY38vLTz4sWL5ZmZmb+3/v4rgCjwM9/f4ekK"
 "kO/i0ynqZSDCp5Pkoe9g4CXgL6D8P4fMyrgY6mOtAAAAAElFTkSuQmCC")
 
-# vi:ai:et:ts=2 sw=2 sts=2 ff=unix fenc=utf-8
+# vi:ai:et:ts=2 sw=2 sts=2 fenc=utf-8

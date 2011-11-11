@@ -85,4 +85,4 @@ SHRIMP_ICON = PyEmbeddedImage(
 "9X1vd3uXv7LSQH//7/Gg6ufypwADAIt2LOB2/7HvAAAAAElFTkSuQmCC")
 
 
-# vi:ai:et:ts=2 sw=2 sts=2 ff=unix fenc=utf-8
+# vi:ai:et:ts=2 sw=2 sts=2 fenc=utf-8

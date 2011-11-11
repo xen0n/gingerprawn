@@ -91,4 +91,4 @@ def del_route(subnet, netmask): # netmask a must in linux2 targets
     out, err = subp.communicate()
     return parse_route_cmd(out, err, subp.returncode)
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8

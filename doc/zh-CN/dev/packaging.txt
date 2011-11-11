@@ -25,4 +25,4 @@ NSIS 实现安装程序。写了一些小脚本和批处理来自动化打包中
     你需要把 7-Zip 主程序（\ ``7z.exe``\ ）还有 UPX 放在系统的 ``PATH``
     环境变量里面！
 
-.. vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8 syntax=rst
+.. vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8 syntax=rst

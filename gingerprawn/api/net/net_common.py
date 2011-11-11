@@ -106,5 +106,5 @@ def find_1st_match_ip(ips, tgt, netmask='255.255.255.0'):
     return None
 
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8
 

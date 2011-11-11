@@ -153,4 +153,4 @@ UNKNOWN_ICON = PyEmbeddedImage(
   "MtHBFrfd0vrgZovvNytYo7B9QH9o62IjpXZPfDq+t26BdpTRlndVRJ5TP+9nboukF8gaY/5Ep7rf"
   "V0tXWtrisTMUaUd8D6rhvu4+1rfAYGRceeGW/x0A0SHA6kCKrkkAAAAASUVORK5CYII=")
 
-# vi:ai:et:ts=2 sw=2 sts=2 ff=unix fenc=utf-8
+# vi:ai:et:ts=2 sw=2 sts=2 fenc=utf-8

@@ -89,4 +89,4 @@ class ProgressStatusBar(wx.StatusBar):
         return wx.StatusBar.SetStatusText(self, txt, 0 if pos is None else pos)
 
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8

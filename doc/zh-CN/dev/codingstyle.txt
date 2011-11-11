@@ -12,7 +12,7 @@ Python 语言部分
 * 函数名：用 ``words_linked_with_underscore`` 形式，不用 ``UpperCase`` 或者 ``camelCase`` 形式；
 * 模块级别的常量：用 ``UPPERCASE_WORDS`` 形式，私有的量用 ``_PRIVATE_VARIABLE`` 形式；
 * 与习惯一致，可变参数通常情况用 ``*args`` 与 ``**kwargs`` 表示，类的成员方法的 ``self`` 指针名为 ``self``;
-* 文件格式：用 UTF-8 编码，Unix/Linux (``LF``) 行尾，在文件头加入 ``# -*- coding: utf-8 -*-`` 标注，文件尾用 ``# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8`` 标注，以适应 Emacs、Vim 及 Python 的需求；
+* 文件格式：用 UTF-8 编码，Unix/Linux (``LF``) 行尾，在文件头加入 ``# -*- coding: utf-8 -*-`` 标注，文件尾用 ``# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8`` 标注，以适应 Emacs、Vim 及 Python 的需求；
 * 注释：全部使用英语，尽量不做行尾注释，把一行的注释放在那一行之上，这样做是为了代码可读性和控制每行长度；
 * 杂项：做修改时可以注释掉某些语句；但向 SVN 签入之前最好将这些语句彻底删除，SVN 的 ``diff`` 功能可以做到比对。
 
@@ -20,4 +20,4 @@ Python 语言部分
 
     TODO...
 
-.. vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8 syntax=rst
+.. vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8 syntax=rst

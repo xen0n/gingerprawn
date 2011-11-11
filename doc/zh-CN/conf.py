@@ -240,4 +240,4 @@ class DummyAppOptions(object):
 __builtin__.__dict__['_APP_OPTIONS'] = DummyAppOptions()
 __builtin__.__dict__['_APP_EXECUTABLE'] = ''
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8

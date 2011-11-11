@@ -202,4 +202,4 @@ Function un.onInit
 
 FunctionEnd
 
-; vim:ai:et:ts=2 sw=2 sts=2 ff=unix fenc=gbk
+; vim:ai:et:ts=2 sw=2 sts=2 fenc=gbk

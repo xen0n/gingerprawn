@@ -36,4 +36,4 @@
       :doc:`各模块说明（英文） <autodoc/index>`
 
 
-.. vim:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8 syntax=rst
+.. vim:ai:et:ts=4 sw=4 sts=4 fenc=utf-8 syntax=rst

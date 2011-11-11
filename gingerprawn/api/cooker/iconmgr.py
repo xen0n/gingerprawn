@@ -51,4 +51,4 @@ def get_bitmap(shrimp):
     return ICON_IMAGELIST[ICON_NAMEMAP.get(shrimp, 0)]
 
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8

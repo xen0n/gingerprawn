@@ -36,4 +36,4 @@ class JiangnanAcademicAffairs(jwxt_zf.ZFAcademicAffairs):
         jwxt_zf.ZFAcademicAffairs.__init__(self, ENTRY_URL_BASE, cache)
 
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8

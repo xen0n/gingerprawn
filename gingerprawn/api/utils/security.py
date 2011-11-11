@@ -90,4 +90,4 @@ def clarify_ob64(s):
     return clarify_b64(''.join([b64[::-1], _ob64_PADDINGTABLE[extra], ]))
 
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8

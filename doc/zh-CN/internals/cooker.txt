@@ -100,4 +100,4 @@ shrimp: 虾，就是“姜大虾”中的“虾”。更技术的说法，应该
 
     TODO: add more details when free
 
-.. vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8 syntax=rst
+.. vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8 syntax=rst

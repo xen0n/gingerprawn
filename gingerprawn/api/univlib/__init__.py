@@ -44,4 +44,4 @@ def set_current_univ(univ):
             current.UNIVERSITY_NAME)
 
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8

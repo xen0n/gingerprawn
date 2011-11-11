@@ -491,4 +491,4 @@ SETTINGS_ICON = PyEmbeddedImage(
 "AaFbdWS4G/dJOkPl/wQYAC8txsiZR6d7AAAAAElFTkSuQmCC")
 
 
-# vi:ai:et:ts=2 sw=2 sts=2 ff=unix fenc=utf-8
+# vi:ai:et:ts=2 sw=2 sts=2 fenc=utf-8

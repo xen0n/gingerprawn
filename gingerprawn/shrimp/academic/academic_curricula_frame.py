@@ -237,4 +237,4 @@ def invoke(prnt, userinfo, cfg_obj):
     # frame.Show()
 
 
-# vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8
+# vi:ai:et:ts=4 sw=4 sts=4 fenc=utf-8

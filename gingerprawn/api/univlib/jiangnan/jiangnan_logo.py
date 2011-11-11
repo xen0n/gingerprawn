@@ -614,4 +614,4 @@ UNIVERSITY_LOGO = PyEmbeddedImage(
 "wyRlWdcW0ztaWpJU5StBmKmFsZMosogItCbKuLafce2MhvdmQQaItSip1aIkYAwREcHmmGY8J875"
 "Xs22eHlfT6lUjRLp2ZZuy3uJVDrasuE2U3BscML4/wEIkZ/ZL9uqYQAAAABJRU5ErkJggg==")
 
-# vi:ai:et:ts=2 sw=2 sts=2 ff=unix fenc=utf-8
+# vi:ai:et:ts=2 sw=2 sts=2 fenc=utf-8
