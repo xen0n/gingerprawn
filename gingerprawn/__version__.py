@@ -104,7 +104,6 @@ def get_svn_revision(path=None):
 
 VCS_HANDLERS.append(get_svn_revision)
 
-# TODO: add Git revision fetching support
 def get_git_commit(path=None):
     """
     Returns the Git commit id in the form Git-01234567,
@@ -117,26 +116,50 @@ def get_git_commit(path=None):
     inspect. If it's not provided, this will use the root package
     directory's parent dir.
     """
-    commit_id = None
+
+    # Git directory...
     if path is None:
         path = gingerprawn.__path__[0]
-        loghead_path = '%s/../.git/logs/HEAD' % path
+        git_path = '%s/../.git/' % path
     else:
-        loghead_path = '%s/.git/logs/HEAD' % path
+        git_path = '%s/.git/' % path
     # normalize a little bit
-    loghead_path = os.path.normpath(loghead_path)
+    git_path = os.path.normpath(git_path)
 
+    # Phase 1, read the HEAD file to get the current head
+    head_path = os.path.join(git_path, 'HEAD')
     try:
-        loghead = open(loghead_path, 'rb').read()
+        fp = open(head_path, 'rb')
+        ref = fp.read().strip()
     except IOError:
-        pass
+        return (False, None, )
     else:
-        parts = loghead.split(' ')
-        commit_id = parts[1][:8]
+        ref_path_match = re.search(r'^ref: (.*)$', ref)
+        if ref_path_match:
+            ref_path = ref_path_match.groups()[0]
+            print ref_path
+        else:
+            # unrecognized HEAD format...
+            return (False, None, )
+    finally:
+        fp.close()
 
-    if commit_id:
-        return (True, u'Git-%s' % commit_id, )
-    return (False, None, )
+    # now ref_path is ready, move on to Phase 2, pull out the commit id
+    commit_path = os.path.normpath(os.path.join(git_path, ref_path))
+    try:
+        fp = open(commit_path, 'rb')
+        commit = fp.read().strip()
+    except IOError:
+        return (False, None, )
+    else:
+        # Truncate the commit id.
+        commit_id = commit[:8]
+        print 'commit:', commit
+    finally:
+        fp.close()
+
+    # if we arrive here, we're done and commit id is ready.
+    return (True, u'Git-%s' % commit_id, )
 
 VCS_HANDLERS.append(get_git_commit)
 
