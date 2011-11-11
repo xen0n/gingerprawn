@@ -1,0 +1,4 @@
+This is gingerprawn, a modular pluggable framework for wxPython;
+and JNMaster, a bunch of plugins written on top of gingerprawn, intended to
+help students in Jiangnan University, Wuxi, China to make better use of the
+school intranet.

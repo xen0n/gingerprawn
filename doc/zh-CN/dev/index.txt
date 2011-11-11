@@ -1,0 +1,15 @@
+﻿参与姜大虾开发过程
+==================
+
+.. note::
+
+    这个 TODO 非常明显
+
+.. toctree::
+    :maxdepth: 1
+
+    codingstyle
+    packaging
+
+
+.. vim:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8 syntax=rst

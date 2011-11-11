@@ -1,0 +1,58 @@
+﻿-- -*- coding: utf-8 -*-
+-- 宿舍IP分布描述文件
+-- created by xenon
+--
+-- 说明:
+-- 注释符号和 Lua 的一样
+-- 文件格式是分段的，每段之间必须有至少一个空行
+-- segtype 目前定义了 uniform 及 special
+-- uniform 意为 IP 分布是均匀的，而 special 则用于指定不规则的范围。
+-- ipprefix 是目标 IP 地址的前缀
+--
+-- 对 uniform 型区段：
+-- ipsubstart 是前缀的下一位 IP 开始位置
+-- ipstep 是每段 IP 的长度，比如 172.17.0.* ~ 172.17.7.* 对应的 step 是 8
+-- 这影响整个区段
+-- apartmentstart 是宿舍号的开始
+-- 数据行以半角"号开始，按宿舍号递增排序，顺序是园名,本园公寓数,性别
+-- 性别：m--男生，f--女生，x--混合，（空）--我不知道
+-- TODO: 采集更多的样本以期精确判断
+--
+-- 对 special 型区段，没有 ipsubstart, ipstep, apartmentstart，数据行格式
+-- 类似 "园名,楼号,IP 段始,末（目前只支持精确到第三位）,性别
+
+-- 北区
+-- "桂园,6,x
+-- 2011-04-25: 今天从梅园和桂园之间过，所以桂园的数据更新了
+-- 2011-07: 桂园的男生全都搬到李园了，所以现在桂园全部住着妹纸（学妹）了
+segtype=uniform
+ipprefix=172.17
+ipsubstart=0
+ipstep=8
+apartmentstart=1
+"梅园,5,m
+"桂园,5,f
+"榴园,6,f
+"桃园,4,m
+"李园,4,m
+"杏园,4,f
+
+-- 南区
+segtype=uniform
+ipprefix=172.20
+ipsubstart=0
+ipstep=8
+apartmentstart=60
+"浩苑,5,
+"润苑,8,
+"澈苑,4,f
+"清苑,4,m
+"涓苑,4,f
+
+-- TODO: this needs further clarification
+segtype=special
+ipprefix=172.20
+"瀚苑,87,220,220,
+"瀚苑,88,232,233,
+
+-- vi:ai:et:fenc=utf-8 ff=dos

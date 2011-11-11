@@ -1,0 +1,20 @@
+﻿姜大虾技术文档
+==============
+
+.. warning::
+
+    姜大虾现在正处于初期开发阶段，接口不时会变化，
+    文档很可能反映不了当前的代码状态。
+    这也算个 TODO 吧 >_<
+
+.. toctree::
+   :maxdepth: 1
+
+   struct
+   invocation
+   startup
+   cooker
+   logger
+
+
+.. vim:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8 syntax=rst

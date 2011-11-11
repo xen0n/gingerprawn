@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
+<!-- eric4 tasks file for project gingerprawn -->
+<!-- Saved: 2011-10-23, 17:36:23 -->
+<Tasks version="4.2">
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: push sth</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:48</Created>
+    <Resource>
+      <Filename>shrimp/dailyinfo/dailyinfo_main.py</Filename>
+      <Linenumber>45</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: push Top10 posts</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:48</Created>
+    <Resource>
+      <Filename>shrimp/jnrain/jnrain_main.py</Filename>
+      <Linenumber>42</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: convert the type too, to prevent possible name change in the future</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:48</Created>
+    <Resource>
+      <Filename>shrimp/librarian/librarian_main.py</Filename>
+      <Linenumber>80</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: do this in more Pythonic way.</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:48</Created>
+    <Resource>
+      <Filename>api/webop/__init__.py</Filename>
+      <Linenumber>67</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: deal with a potential timeout here</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:49</Created>
+    <Resource>
+      <Filename>api/univlib/backends/library_libsys.py</Filename>
+      <Linenumber>57</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: compose the code when i have time</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:50</Created>
+    <Resource>
+      <Filename>api/platform/autostart_linux2.py</Filename>
+      <Linenumber>4</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: This is almost the same as librarian/librarian_userinfo_dlg.py, so</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:50</Created>
+    <Resource>
+      <Filename>shrimp/lobster/lobster_setting_dlg.py</Filename>
+      <Linenumber>4</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: CHANGE THIS VAR'S NAME TO STH MORE ACCURATE!</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:50</Created>
+    <Resource>
+      <Filename>api/univlib/jiangnan/curtime.py</Filename>
+      <Linenumber>13</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: This is almost the same as librarian/librarian_userinfo_dlg.py, so</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:51</Created>
+    <Resource>
+      <Filename>shrimp/academic/academic_settings_dlg.py</Filename>
+      <Linenumber>4</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="True">
+    <Summary>FIXME: These are BROKEN when used together with wx.SpinCtrl...</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:51</Created>
+    <Resource>
+      <Filename>api/ui/validators.py</Filename>
+      <Linenumber>5</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: remove this ugly direct copy ASAP!!!</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:51</Created>
+    <Resource>
+      <Filename>shrimp/librarian/librarian_userinfo_dlg.py</Filename>
+      <Linenumber>13</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: refactor this useful tidbit of code into a separate fn!</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:51</Created>
+    <Resource>
+      <Filename>shrimp/academic/academic_autoremind.py</Filename>
+      <Linenumber>130</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: make this color portable across different platforms</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:51</Created>
+    <Resource>
+      <Filename>shrimp/academic/academic_autoremind.py</Filename>
+      <Linenumber>143</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: This timer will cause the frame to destroy after LINGER ms's,</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:51</Created>
+    <Resource>
+      <Filename>shrimp/academic/academic_autoremind.py</Filename>
+      <Linenumber>198</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: an __all__ to get rid of all ctypes things leaking into global</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:52</Created>
+    <Resource>
+      <Filename>api/platform/notify_w32.py</Filename>
+      <Linenumber>8</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: add support for icons</Summary>
+    <Description></Description>
+    <Created>2011-08-08, 19:34:52</Created>
+    <Resource>
+      <Filename>api/platform/notify_w32.py</Filename>
+      <Linenumber>229</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: finish me!</Summary>
+    <Description></Description>
+    <Created>2011-08-10, 11:38:33</Created>
+    <Resource>
+      <Filename>api/net/scenario.py</Filename>
+      <Linenumber>21</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: implement this</Summary>
+    <Description></Description>
+    <Created>2011-08-10, 11:38:33</Created>
+    <Resource>
+      <Filename>api/net/scenario.py</Filename>
+      <Linenumber>26</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: fix this possible IndexError</Summary>
+    <Description></Description>
+    <Created>2011-10-09, 11:44:14</Created>
+    <Resource>
+      <Filename>api/univlib/backends/jwxt_zf.py</Filename>
+      <Linenumber>171</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: improve this cache hit test</Summary>
+    <Description></Description>
+    <Created>2011-10-09, 11:44:14</Created>
+    <Resource>
+      <Filename>api/univlib/backends/jwxt_zf.py</Filename>
+      <Linenumber>193</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: parse weekprop even harder</Summary>
+    <Description></Description>
+    <Created>2011-10-09, 11:44:15</Created>
+    <Resource>
+      <Filename>api/univlib/backends/jwxt_zf.py</Filename>
+      <Linenumber>525</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: make this more robust</Summary>
+    <Description></Description>
+    <Created>2011-10-12, 23:38:18</Created>
+    <Resource>
+      <Filename>api/cooker/shrimpmgr.py</Filename>
+      <Linenumber>118</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: add support for initializing image from memory buffer</Summary>
+    <Description></Description>
+    <Created>2011-10-12, 23:38:42</Created>
+    <Resource>
+      <Filename>api/platform/notify_linux2.py</Filename>
+      <Linenumber>14</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: you can generalize this... maybe.</Summary>
+    <Description></Description>
+    <Created>2011-10-12, 23:38:52</Created>
+    <Resource>
+      <Filename>api/platform/wxmsw_wndhook.py</Filename>
+      <Linenumber>38</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: MUST REPLACE THIS HARDCODED URL WITH REAL VALUE!</Summary>
+    <Description></Description>
+    <Created>2011-10-12, 23:43:27</Created>
+    <Resource>
+      <Filename>api/ui/aboutbox.py</Filename>
+      <Linenumber>20</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: generalize this... get things done</Summary>
+    <Description></Description>
+    <Created>2011-10-12, 23:44:49</Created>
+    <Resource>
+      <Filename>api/ui/statusbar.py</Filename>
+      <Linenumber>5</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: push sth</Summary>
+    <Description></Description>
+    <Created>2011-10-14, 23:27:53</Created>
+    <Resource>
+      <Filename>shrimp/academic/academic_main.py</Filename>
+      <Linenumber>62</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: fix relative import in shrimp...</Summary>
+    <Description></Description>
+    <Created>2011-10-14, 23:27:53</Created>
+    <Resource>
+      <Filename>shrimp/academic/academic_main.py</Filename>
+      <Linenumber>115</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: better sync here</Summary>
+    <Description></Description>
+    <Created>2011-10-23, 17:28:15</Created>
+    <Resource>
+      <Filename>api/cooker/__init__.py</Filename>
+      <Linenumber>153</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="True">
+    <Summary>FIXME: use anything sensible to replace this line as soon as</Summary>
+    <Description></Description>
+    <Created>2011-10-23, 17:28:55</Created>
+    <Resource>
+      <Filename>launcher/main.py</Filename>
+      <Linenumber>8</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: figure out a way to keep the frame object's reference</Summary>
+    <Description></Description>
+    <Created>2011-10-23, 17:28:56</Created>
+    <Resource>
+      <Filename>launcher/main.py</Filename>
+      <Linenumber>201</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: refactor this once i come up with a solution</Summary>
+    <Description></Description>
+    <Created>2011-10-23, 17:28:56</Created>
+    <Resource>
+      <Filename>launcher/main.py</Filename>
+      <Linenumber>217</Linenumber>
+    </Resource>
+  </Task>
+</Tasks>

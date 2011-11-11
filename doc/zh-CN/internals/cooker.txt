@@ -1,0 +1,103 @@
+姜大虾插件管理器
+================
+
+插件管理器是姜大虾的灵魂，它控制着一切上层功能模块的启动与停止。
+
+可能会用到的名词解释：
+shrimp: 虾，就是“姜大虾”中的“虾”。更技术的说法，应该是叫做“插件”的东西。不过，正如“姜大虾”作为一道菜其主料必然是虾而不是姜一样，shrimp 在姜大虾架构中的地位（从最终用户的视角看来）应该是相对于（举个例子）火狐插件之于火狐浏览器本身的地位要来得重的。
+元-shrimp: 主界面模块。由于姜大虾架构视一切 shrimp 为平等，因此主界面也是一只 shrimp；但这只 shrimp 功能上统领所有其他虾兵蟹将，故名。
+
+接口说明
+--------
+
+模块级别的公有变量如下：
+
+* ``SHRIMP_DIR`` 字符串，是 shrimp 目录的绝对路径，目前位于包顶层目录（\ ``_PKG_TOPLEV``\ ，加载早期由 ``main.py`` 设置）下的 ``shrimp`` 目录
+* ``SHRIMP_EXT`` 字符串，是 shrimp 包的扩展名，目前是 ``'.zip'``
+
+同样可以访问，但作为插件 **最好不要** 依赖的变量如下：
+
+* ``SHRIMP_LIST`` 元组类型，元素为 ``(shrimp 名, 包绝对路径)`` 形式
+* ``SHRIMP_MODULES`` 字典类型，键为加载成功的 shrimp 名称，值为对应的 ``module`` 对象
+* ``SHRIMP_RUNNING`` 字典类型，键为当前正在运行的 shrimp 名称，值为对应的 ``module`` 对象
+* ``SHRIMP_LOADSTATUS`` 字典类型，键为 shrimp 名称，值为 ``'ok'`` 与 ``'fail'`` 之一
+
+这些内部结构可能会随着版本升级改变，而且诸如 ``SHRIMP_RUNNING`` 的结构一旦被修改会破坏正常的插件管理机能；除非是测试目的， **最好不要** 使用这些变量。
+
+接口函数说明：
+.. py:function:: get_shrimp_mod(shrimp)
+
+    得到 *shrimp* 所对应的模块对象。
+
+    如果不存在对应的模块，扔出 ``KeyError('no such shrimp')``\ 。
+
+.. py:function:: bring_up_shrimp(shrimp[, args=('normal', )])
+
+    .. note::
+
+        为确保各 shrimp 独立性，最好只由元-shrimp 调用此函数
+
+    以可选的参数 *args* 启动 *shrimp* ，返回 ``None``\ 。
+    
+    按照目前的架构，\ ``args`` 的第一个参数代表 *shrimp* 启动的原因，如果是 ``'autostart'`` 则意味着是随操作系统一同启动的。
+
+    如果 *shrimp* 已经在运行，扔出 ``ValueError('already running')``
+
+.. py:function:: bring_down_shrimp(shrimp)
+
+    .. note::
+
+        为确保各 shrimp 独立性，最好只由元-shrimp 调用此函数
+
+    有序地终止 *shrimp* 的运行，返回 ``None``\ 。如果当前没有在运行，扔出 ``ValueError('not running')``
+
+.. py:function:: query_shutdown([shrimp=None])
+
+    .. note::
+
+        带默认参数的调用只应该来自元-shrimp
+
+    带字符串参数：询问指定的 shrimp 是否同意关闭请求；
+
+    带默认参数：顺序轮询所有正运行的 shrimp 是否同意关闭请求。
+
+    如果任意一个 shrimp 不同意关闭（可能源自用户，也可能源自自身逻辑），函数返回 ``False``\ ，程序应拒绝关闭（例如，使用 ``event.Veto()`` 否决 wxPython 的 ``EVT_CLOSE`` 事件）；否则，返回 ``True``\ ，程序可以继续关闭。
+
+.. py:function:: do_shutdown()
+
+    .. note::
+        本函数只应被元-shrimp 调用，否则会造成混乱
+
+    用于程序有序退出，只应该在 ``query_shutdown()`` 允许的情况下使用。执行此函数将导致对所有正在运行的 shrimp 执行 bring_down，进而退出整个程序。
+
+.. py:function:: get_minver(shrimp)
+
+    返回此 shrimp 正常运行所需要的最低姜大虾版本，是三元组 ``(major, minor, rev)`` 形式。
+
+.. py:function:: get_platform(shrimp)
+
+    返回 shrimp 的适用平台， ``'all'`` 意味着全部姜大虾支持的平台均可使用；如不全支持，平台列表中每一条与 Python 的 ``sys.platform`` 可能的返回值一一对应，如 ``'win32'`` ``'linux2'`` 之类。
+
+.. py:function:: get_info(shrimp)
+
+    返回 shrimp 的描述信息，是一个字典对象 (\ ``SHRIMP_INFO``\ )，内含信息见如下四个函数。
+
+.. py:function:: get_name(shrimp)
+    get_version(shrimp)
+    get_author(shrimp)
+    get_desc(shrimp)
+
+    以上四个函数是对 ``get_info`` 的简单调用，返回 ``SHRIMP_INFO`` 中各自感兴趣的键值。
+
+不应使用的内部函数
+------------------
+
+.. py:function:: load_shrimp(callback[, shrimpdict=SHRIMP_MODULES])
+
+    这函数只应在初始化时调用。
+
+.. note::
+
+    TODO: add more details when free
+
+.. vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8 syntax=rst

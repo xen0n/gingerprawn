@@ -1,0 +1,88 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# JNMaster / jnrain / icon for the shrimp
+# the icon is a scaled-up version of JNRain's favicon.
+#
+# Copyright (C) 2011 Wang Xuerui <idontknw.wang@gmail.com>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+from wx.lib.embeddedimage import PyEmbeddedImage
+
+# generated from file 'jnrain.png'
+SHRIMP_ICON = PyEmbeddedImage(
+"iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ"
+"bWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp"
+"bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6"
+"eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEz"
+"NDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo"
+"dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw"
+"dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu"
+"MC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVz"
+"b3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1N"
+"Ok9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4RDJGOUQ5ODg3NUVFMDExQTVGOEU3NTdGODEw"
+"RkJFNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBN0E4MUM0MjVFODkxMUUwOUJDMEM0REEz"
+"OTU5MTJDNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBN0E4MUM0MTVFODkxMUUwOUJDMEM0"
+"REEzOTU5MTJDNSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3Mi"
+"PiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1Mjc3RkE1OTg5"
+"NUVFMDExODRBQUUzNjgwQ0U0NTdENSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4RDJGOUQ5"
+"ODg3NUVFMDExQTVGOEU3NTdGODEwRkJFNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRG"
+"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")
+
+
+# vi:ai:et:ts=2 sw=2 sts=2 ff=unix fenc=utf-8

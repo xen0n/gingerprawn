@@ -1,0 +1,44 @@
+江大侠（姜大虾）概览
+====================
+
+江大侠（姜大虾）由两大部分构成：插件和基础支持架构（姜大虾）与各具体的插件模块（江大侠）。这两部分以 Python 包的形式存在于包的顶层目录中。
+
+目录结构
+--------
+
+**已部分/完全实现的部分**:
+
+* ``gingerprawn`` 项目 SVN 根目录
+
+    * ``doc`` 分语言的文档源文件目录
+    * ``gingerprawn`` **包顶层目录**
+
+        * ``api`` 提供给界面使用的公共接口
+
+            * ``conf`` 配置信息模块
+            * ``cooker`` 插件管理器
+            * ``logger`` Python 日志架构封装
+            * ``net`` 网络功能封装
+            * ``platform`` 平台相关支持
+            * ``ui`` 为 GUI 所使用的辅助 widgets
+            * ``univlib`` 分大学的本校网页解析支持库
+
+                * ``backends`` 分系统的解析后端
+                * ``jiangnan`` 江南大学前端支持库
+
+            * ``utils`` 杂七杂八的工具函数
+            * ``webop`` 一个基于 ``mechanize`` 和 ``lxml`` 的\
+                        自动爬网页抓信息的框架
+
+        * ``interface`` 主程序所在包
+        * ``shrimp`` **江大侠插件目录**
+
+            * ``academic`` 教务系统模块
+            * ``dailyinfo`` 日常生活信息模块
+            * ``jnrain`` 江南听雨的相关信息操作
+            * ``librarian`` 电子图书馆功能
+            * ``lobster`` “龙虾”，顾名思义，默认的主界面模块
+            * ``schoolnet`` 内网网络诊断设置工具
+
+
+.. vi:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8 syntax=rst

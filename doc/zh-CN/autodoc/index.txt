@@ -1,0 +1,45 @@
+﻿自动生成的模块说明（英文）
+==========================
+
+.. rubric::
+    测试中，这堆东西是由 Sphinx 直接根据模块和函数等等的 docstring 自动生成的。
+    如果文档的说明与此处的描述相左，以这个为准。
+
+.. toctree::
+    :maxdepth: 2
+
+.. automodule:: gingerprawn.interface
+    :members:
+
+.. automodule:: gingerprawn.api.conf
+    :members:
+
+.. automodule:: gingerprawn.api.cooker
+    :members:
+
+.. automodule:: gingerprawn.api.logger
+    :members:
+
+.. automodule:: gingerprawn.api.platform.aero
+    :members:
+
+.. automodule:: gingerprawn.api.platform.autostart
+    :members:
+
+.. automodule:: gingerprawn.api.ui
+    :members:
+
+.. automodule:: gingerprawn.api.utils
+    :members:
+
+.. automodule:: gingerprawn.api.univlib
+    :members:
+
+.. automodule:: gingerprawn.api.univlib.backends.jwxt_zf
+    :members:
+
+.. automodule:: gingerprawn.api.univlib.jiangnan
+    :members:
+
+
+.. vim:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8 syntax=rst

@@ -1,0 +1,39 @@
+
+.. _index:
+
+==============
+姜大虾说明文档
+==============
+
+.. rubric:: 姜大虾通用开发框架，可按需自由扩展的插件架构 TODO 把这句话换掉！
+
+需要帮助！
+==========
+
+开发过程中发现了问题，目前你应该到江南听雨 BBS 的 `Program 版`_ （流行界面链接）
+寻求帮助，发帖时加上前缀【姜大虾开发】哦～
+
+.. _Program 版: http://bbs.jnrain.com/wForum/board.php?name=Program
+
+内容导航
+========
+
+    * **基础问题**
+
+      * TODO!!
+
+    * **参与开发**
+      :doc:`项目编码风格 <dev/codingstyle>`
+
+    * **技术细节**
+      :doc:`项目目录结构 <internals/struct>` |
+      :doc:`程序启动方式 <internals/invocation>` |
+      :doc:`初始化机制 <internals/startup>` |
+      :doc:`虾兵蟹将——插件管理器 <internals/cooker>` |
+      :doc:`日志架构 <internals/logger>`
+      
+    * **由代码自动生成的文档**
+      :doc:`各模块说明（英文） <autodoc/index>`
+
+
+.. vim:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8 syntax=rst

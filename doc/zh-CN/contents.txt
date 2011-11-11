@@ -1,0 +1,27 @@
+.. _contents:
+
+==============
+姜大虾文档目录
+==============
+
+.. toctree::
+    :hidden:
+
+    index
+
+.. toctree::
+    :maxdepth: 3
+
+    basics/index
+    dev/index
+    internals/index
+    autodoc/index
+
+Indices, glossary and tables
+============================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+.. vim:ai:et:ts=4 sw=4 sts=4 ff=unix fenc=utf-8 syntax=rst
