@@ -81,7 +81,8 @@ def get_svn_revision(path=None):
     entries_path = '%s/.svn/entries' % path
 
     try:
-        entries = open(entries_path, 'r').read()
+        fp = open(entries_path, 'r')
+        entries = fp.read()
     except IOError:
         pass
     else:
@@ -97,6 +98,8 @@ def get_svn_revision(path=None):
             from xml.dom import minidom
             dom = minidom.parse(entries_path)
             rev = dom.getElementsByTagName('entry')[0].getAttribute('revision')
+    finally:
+        fp.close()
 
     if rev:
         return (True, u'SVN-%s' % rev, )
