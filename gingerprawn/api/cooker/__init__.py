@@ -291,7 +291,7 @@ def get_copyright(shrimp):
 
 ## MODIFIED: to facilitate proper autodocumenting, this is protected
 ## UPDATE 20111023: shrimp no longer auto-discovered on import, discover
-## manually on init.
+## manually on init. The autodoc protection of entry point is not needed now.
 
 #try:
 #    # set up by an added line in doc/<LANG>/conf.py

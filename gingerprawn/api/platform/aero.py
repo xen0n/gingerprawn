@@ -60,6 +60,15 @@ if sys.platform == 'win32':
 else:
     has_dwm = False
 
+# NOTE: For auto-documentation to properly extract the docstrings, we override
+# the has_dwm result.
+try:
+    _APP_OPTIONS._is_autodoc
+    # Inside Sphinx, expose the real functions
+    has_dwm = True
+except AttributeError:
+    pass
+
 # Functions.
 if has_dwm:
     import wxmsw_wndhook

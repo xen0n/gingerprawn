@@ -41,14 +41,23 @@ import wx
 # Flag to enable message loop debugging
 __MSGDEBUG = False
 
-## It's probably not neccesary to make this distinction, but it never hurts
-## to be safe
-if 'unicode' in wx.PlatformInfo:
-    SetWindowLong = ctypes.windll.user32.SetWindowLongW
-    CallWindowProc = ctypes.windll.user32.CallWindowProcW
-else:
-    SetWindowLong = ctypes.windll.user32.SetWindowLongA
-    CallWindowProc = ctypes.windll.user32.CallWindowProcA
+# NOTE: for autodocumenting, we check if we are imported by Sphinx; if it's the
+# case we don't do the imports because the build may be on a different OS
+try:
+    _APP_OPTIONS._is_autodoc
+    _DRY_RUN = True
+except AttributeError:
+    _DRY_RUN = False
+
+if not _DRY_RUN:
+    ## It's probably not neccesary to make this distinction, but it never hurts
+    ## to be safe
+    if 'unicode' in wx.PlatformInfo:
+        SetWindowLong = ctypes.windll.user32.SetWindowLongW
+        CallWindowProc = ctypes.windll.user32.CallWindowProcW
+    else:
+        SetWindowLong = ctypes.windll.user32.SetWindowLongA
+        CallWindowProc = ctypes.windll.user32.CallWindowProcA
 
 if __MSGDEBUG:
     from .w32msgs import W32MSG_DICT_WM as __W32MSG
@@ -61,7 +70,11 @@ WM_DESTROY  = 2
 ## Create a type that will be used to cast a python callable to a c callback
 ## function
 ## first arg is return type, the rest are the arguments
-WndProcType = ctypes.WINFUNCTYPE(c_int, c_long, c_int, c_int, c_int)
+
+# This also has to be protected by the dry_run variable, as ctypes on platforms
+# other than Windows doesn't have WINFUNCTYPE built in.
+if not _DRY_RUN:
+    WndProcType = ctypes.WINFUNCTYPE(c_int, c_long, c_int, c_int, c_int)
 
 def hookWndProc(self):
     self.__localWndProcWrapped = WndProcType(self.localWndProc)
