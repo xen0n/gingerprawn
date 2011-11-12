@@ -8,7 +8,7 @@
 .. toctree::
     :maxdepth: 2
 
-.. automodule:: gingerprawn.interface
+.. automodule:: gingerprawn.launcher
     :members:
 
 .. automodule:: gingerprawn.api.conf
