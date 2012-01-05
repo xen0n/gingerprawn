@@ -256,11 +256,15 @@ class lobster_main(wx.Frame):
         # this is not a "scroller" any more
         self.btnboard = wx.Panel(self, wxID_LOBSTER_MAINBTNBOARD,
                 style=wx.TAB_TRAVERSAL, name='btnboard')
-        if wx.Platform == '__WXGTK__':
-            # not sure if this is the proper colour, but at least on Ubuntu's
-            # default theme this looks the same as titlebar's fill color
-            self.btnboard.SetBackgroundColour(wx.SystemSettings.GetColour(
-                     wx.SYS_COLOUR_CAPTIONTEXT))
+        # XXX the if stmt below only works for that Ubuntu theme, and resulted
+        # in VERY BAD appearance when running in any other distro or theme.
+        # Disabled it altogether.
+        #
+        # if wx.Platform == '__WXGTK__':
+        #     # not sure if this is the proper colour, but at least on Ubuntu's
+        #     # default theme this looks the same as titlebar's fill color
+        #     self.btnboard.SetBackgroundColour(wx.SystemSettings.GetColour(
+        #              wx.SYS_COLOUR_CAPTIONTEXT))
 
         # my icon...
         self.btnSetting = wx.BitmapButton(self.btnboard,
@@ -287,6 +291,9 @@ class lobster_main(wx.Frame):
         self.InitShrimpList()
         self._init_sizers()
         self.bag.Layout()
+
+        # is this useful??
+        self.SendSizeEvent()
 
         # now for the crazy full glass effect in Windows~
         if wx.Platform == '__WXMSW__':
